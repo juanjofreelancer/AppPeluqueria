@@ -21,11 +21,11 @@ class Email {
         // Create the email object
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '02f9f6f8b3f672';
-        $mail->Password = '94e1eccb4ffe39';
+        $mail->Port = 587;
+        $mail->Username = 'peluqueriaapp@outlook.es';
+        $mail->Password = 'ta7jJmh8bFTRUQxs';
 
         $mail->setFrom('peluqeriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
         $mail->addAddress($this->email);
