@@ -27,8 +27,8 @@ class Email {
         $mail->Username = '02f9f6f8b3f672';
         $mail->Password = '94e1eccb4ffe39';
 
-        $mail->setFrom('juanjo_adami@hotmail.com');
-        $mail->addAddress('juanjo_adami@hotmail.com', 'PeluqueriaTyke.com');
+        $mail->setFrom('peluqeriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
         // Use HTML
         $mail->isHTML(true);
