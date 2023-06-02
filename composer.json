@@ -1,0 +1,25 @@
+{
+    "name": "positivo/pelugonza",
+    "description": "Proyecto Pelu",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Views\\" : "./views",
+            "Classes\\" : "./classes"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "juanjofreelancer",
+            "email": "juanjo_adami@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
