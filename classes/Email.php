@@ -21,13 +21,13 @@ class Email {
         // Create the email object
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 465;
-        $mail->Username = 'juanjo.adami89@gmail.com';
-        $mail->Password = 'nccosfmwcvboewue';
-
-        $mail->setFrom('juanjo.adami89@gmail.com', 'https://oyster-app-mzcjx.ondigitalocean.app/');
+        $mail->Port = 587;
+        $mail->Username = 'peluqueriaapp@outlook.es';
+        $mail->Password = 'ta7jJmh8bFTRUQxs';
+        
+        $mail->setFrom('peluqueriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
         // Use HTML
