@@ -5,8 +5,7 @@ $_ENV['DB_USER'],
 $_ENV['DB_PASSWORD'],
 $_ENV['DB_NAME']
 );
-
-
+$db->set_charset("utf8");
 
 
 if (!$db) {
