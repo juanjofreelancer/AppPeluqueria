@@ -19,14 +19,16 @@ class Email {
     public function enviarConfirmacion()
     {
         // Create the email object
+        
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp-relay.sendinblue.com';
+        $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port = 587;
-        $mail->Username = 'peluqueriaapp@outlook.es';
-        $mail->Password = 'ta7jJmh8bFTRUQxs';
-        
+        $mail->Port =$_ENV['MAIL_PORT'];
+        $mail->Username = $_ENV['MAIL_USER'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];
+
+
         $mail->setFrom('peluqueriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
