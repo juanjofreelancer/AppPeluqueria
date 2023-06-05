@@ -22,11 +22,11 @@ class Email {
         
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['MAIL_HOST'];
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port =$_ENV['MAIL_PORT'];
-        $mail->Username = $_ENV['MAIL_USER'];
-        $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->Port =587;
+        $mail->Username = 'peluqueriaapp@outlook.es';
+        $mail->Password = 'ta7jJmh8bFTRUQxs';
 
 
         $mail->setFrom('peluqueriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
@@ -53,16 +53,16 @@ class Email {
         // create a new object
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '02f9f6f8b3f672';
-        $mail->Password = '94e1eccb4ffe39';
+        $mail->Port =587;
+        $mail->Username = 'peluqueriaapp@outlook.es';
+        $mail->Password = 'ta7jJmh8bFTRUQxs';
 
-        $mail->setFrom('juanjo_adami@hotmail.com');
-        $mail->addAddress('juanjo_adami@hotmail.com', 'PeluqueriaTyke.com');
+
+        $mail->setFrom('peluqueriaapp@outlook.es', 'https://oyster-app-mzcjx.ondigitalocean.app/');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
-        // Use HTML
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
